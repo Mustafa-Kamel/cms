@@ -1,0 +1,52 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Add New Article
+                    </header>
+
+
+                    <div class="panel-body">
+                        <form action="addarticle.php" method="post" role="form">
+
+                            <div class="form-group">
+                                <label for="title">title</label>
+                                <input name="title" type="text" class="form-control" placeholder="article title" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="content">content</label>
+                                <textarea cols="60" rows="8" name="content" class="form-control" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cat">Categories</label>
+                                <select name="cat" required>
+                                    <option></option>
+                                    {loop="cats"}
+                                    <option value="{$value.cid}">{$value.cname}</option>
+                                    {/loop}
+                                </select>
+                            </div>
+
+                            <input type="submit" class="btn btn-info" name="addArticle" value="Add New Article" />
+                        </form>
+
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}

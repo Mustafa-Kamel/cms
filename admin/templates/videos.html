@@ -1,0 +1,31 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                       My Videos
+                    </header>
+
+
+                    <div class="panel-body">
+                        {loop="videos"}
+
+                        <iframe width="150" height="120" src="//www.youtube.com/embed/{$value.vid}" frameborder="0" allowfullscreen></iframe><br />
+                        {$value.title}<br />
+                        {/loop}
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}

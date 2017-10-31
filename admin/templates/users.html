@@ -1,0 +1,49 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Users
+                    </header>
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>Username</th>
+                            <th>email</th>
+                            <th>is admin?</th>
+                            <th>Control</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {loop="users"}
+                        <tr>
+                            <td>{$value.id}</td>
+                            <td>{$value.name}</td>
+                            <td>{$value.username} </td>
+                            <td>{$value.email}</td>
+                            <td>{$value.is_admin}</td>
+                            <td>
+                                <a href="updateuser.php?id={$value.id}" class="btn btn-primary">Update</a>
+                                <a href="deleteuser.php?id={$value.id}" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        {/loop}
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}

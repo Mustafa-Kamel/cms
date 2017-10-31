@@ -1,0 +1,49 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Articles
+                    </header>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Title</th>
+                            <th>Username</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Control</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {loop="articles"}
+                        <tr>
+                            <td>{$value.id}</td>
+                            <td>{$value.title}</td>
+                            <td> - </td>
+                            <td>{$value.cname}</td>
+                            
+                            <td>{$value.date}</td>
+                            <td>
+                                <a href="updatearticle.php?id={$value.id}" class="btn btn-primary">Update</a>
+                                <a href="deletearticle.php?id={$value.id}" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        {/loop}
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}

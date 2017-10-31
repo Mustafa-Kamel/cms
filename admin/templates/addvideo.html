@@ -1,0 +1,45 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Add New Video
+                    </header>
+
+
+                    <div class="panel-body">
+                        <form action="addvideo.php" method="post" role="form">
+
+                            <div class="form-group">
+                                <label for="title">title</label>
+                                <input name="title" type="text" class="form-control"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input name="description" type="text" class="form-control"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ytl">Youtube link</label>
+                                <input name="ytl" type="text" class="form-control"  required>
+                            </div>
+                            <input type="submit" class="btn btn-info" name="addVideo" value="Add New Video" />
+                        </form>
+
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}

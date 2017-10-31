@@ -1,0 +1,54 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Add New User
+                    </header>
+
+
+                    <div class="panel-body">
+                        <form action="updateuser.php" method="post" role="form">
+
+                            <div class="form-group">
+                                <label for="name">name</label>
+                                <input name="name" type="text" class="form-control" value="{$name}"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input name="username" type="text" class="form-control"  value="{$username}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input name="email" type="email" class="form-control" value="{$email}"  required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="admin">Is Admin?</label></br>
+                                <input type="radio" name="admin" value="1" required/><b>Yes</b>  
+                                <input type="radio" name="admin" value="0"/><b>No</b>
+                            </div>
+
+                            <input type="hidden"  name="id" value="{$id}" />
+                            <input type="submit" class="btn btn-info" name="UpdateUser" value="Update User" />
+                        </form>
+
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}

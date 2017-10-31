@@ -1,0 +1,58 @@
+{include="header"}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Add New User
+                    </header>
+
+
+                    <div class="panel-body">
+                        <form action="adduser.php" method="post" role="form">
+
+                            <div class="form-group">
+                                <label for="name">name</label>
+                                <input name="name" type="text" class="form-control"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input name="username" type="text" class="form-control"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input name="password" type="password" class="form-control"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input name="email" type="email" class="form-control"  required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="admin">Is Admin?</label></br>
+                                <input type="radio" name="admin" value="1" required/><b>Yes</b>  
+                                <input type="radio" name="admin" value="0"/><b>No</b>
+                            </div>
+
+                            <input type="submit" class="btn btn-info" name="AddUser" value="Add New User" />
+                        </form>
+
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+{include="footer"}
